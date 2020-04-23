@@ -1,9 +1,8 @@
+/*
 import zjawiska.*;
 
 public class Start
 {
-    public static void main(String[] args)
-    {
         var s = new Slonce();
         var d = new Deszcz();
         var sn = new Snieg();
@@ -29,4 +28,4 @@ public class Start
         }
     }
 }
-
+*/
