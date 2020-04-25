@@ -24,7 +24,7 @@ public class Diary {
         switch (choice) {
             // case 1 -> DiaryEntry.addEntry();
             // case 2 ->
-            case 3 -> Geolocation.showMap();
+            case 3 -> Geolocation.main();
             default -> System.out.println("Wychodzenie z programu");
         }
 
