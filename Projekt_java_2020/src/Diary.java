@@ -10,9 +10,9 @@ public class Diary {
         Scanner input = new Scanner(System.in);
         String menu = """
         Wybierz jedną z akcji:
-         1. Dodaj nowy wpis do dziennika
+         1. Dodaj nowy wpis do dziennika i podaj współrzędne zjawiska
          2. Wyświetl wszystkie wpisy
-         3. Wyświetl mapę z obserwacjami
+         3. Wyświetl mapę i współrzędne obserwacji
          4. Wyświetl zgromadzone zdjęcia
          5. Wczytaj zapisany dziennik z pliku
          6. Zapisz dziennik do pliku
@@ -23,9 +23,11 @@ public class Diary {
         int choice = input.nextInt();
 
         switch (choice) {
-            // case 1 -> DiaryEntry.addEntry();
-            // case 2 ->
-            case 3 -> Geolocation.main();
+            case 1 -> //DiaryEntry.addEntry()
+                    Geolocation.main();
+
+            case 3 -> MapDisplay.main();
+
             default -> System.out.println("Wychodzenie z programu");
         }
 

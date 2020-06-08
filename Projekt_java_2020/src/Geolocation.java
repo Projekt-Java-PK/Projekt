@@ -21,7 +21,6 @@ public class Geolocation extends Application {
         connect(stage);
     }
 
-
     private void connect(Stage stage) {
         String url = "https://epsg.io/map#srs=4326&x=19.281006&y=52.536273&z=7&layer=streets";
 
@@ -44,7 +43,7 @@ public class Geolocation extends Application {
         String east = (String) engine.executeScript("document.getElementById(\"easting\").value;");
         String north = (String) engine.executeScript("document.getElementById(\"northing\").value;");
 
-        System.out.println(east + " " + north);
+        System.out.println("Coordinates: " + north + " " + east);
     }
 
     private void displayPage(Stage stage, WebView view, WebEngine engine) {
