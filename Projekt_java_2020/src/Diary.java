@@ -19,6 +19,7 @@ public class Diary {
          7. Wyjście""";
 
         System.out.println(menu);
+
         int choice = input.nextInt();
 
         switch (choice) {
