@@ -1,3 +1,5 @@
+package com.javapk;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.web.WebEngine;

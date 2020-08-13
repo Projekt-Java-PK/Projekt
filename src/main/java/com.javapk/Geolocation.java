@@ -1,3 +1,5 @@
+package com.javapk;
+
 import javafx.application.Application;
 import javafx.concurrent.Worker;
 import javafx.geometry.Pos;
