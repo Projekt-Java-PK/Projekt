@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.collections.FXCollections?>
+
+<?import com.javapk.ObservationType?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0"
+            style="-fx-background-color: F0DCCA;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javapk.DiaryEntryController">
+   <center>
+      <AnchorPane maxHeight="480.0" maxWidth="880.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color:  ; -fx-border-width: 3; -fx-border-color: black; -fx-border-style: solid;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="title" layoutX="140.0" layoutY="63.0" prefWidth="200.0" promptText="Tytuł wpisu">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="content" layoutX="40.0" layoutY="158.0" prefHeight="300.0" prefWidth="400.0" promptText="Treść wpisu">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="save" onAction="#saveEntry" layoutX="625.0" layoutY="421.0" mnemonicParsing="false" style="-fx-background-color: #8D9F87;" text="Zapisz">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ChoiceBox fx:id="type" layoutX="583.0" layoutY="308.0" prefWidth="150.0">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <ObservationType fx:value="KWIATY"/>
+                     <ObservationType fx:value="DRZEWA"/>
+                     <ObservationType fx:value="GWIAZDY"/>
+                     <ObservationType fx:value="ZWIERZE"/>
+                     <ObservationType fx:value="KRAJOBRAZ"/>
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <ImageView fx:id="selectedImageView" fitHeight="150.0" fitWidth="200.0" layoutX="629.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="no-image.png"/>
+               </image>
+            </ImageView>
+            <Button fx:id="choose" onAction="#FileChooser" layoutX="573.0" layoutY="202.0" mnemonicParsing="false" text="Wybierz zdjęcie z obserwacją" />
+            <Label layoutX="580.0" layoutY="291.0" text="Wybierz kategorię obserwacji" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <Label text="Dodawanie wpisu do dziennika" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
