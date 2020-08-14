@@ -8,8 +8,8 @@
       style="-fx-background-color: #6F9283;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javapk.MenuController">
    <children>
       <Button fx:id="addEntryButton" onAction="#addEntry" alignment="CENTER" mnemonicParsing="false" text="Dodaj nowy wpis do dziennika" />
-      <Button fx:id="displayEntriesButton" onAction="#displayEntries" alignment="CENTER" mnemonicParsing="false" text="Wyświetl wszystkie wpisy" />
-      <Button fx:id="displayMapButton" onAction="#displayMap" alignment="CENTER" mnemonicParsing="false" text="Wyświetl mapę i współrzędne obserwacji" />
+      <Button fx:id="displayEntriesButton" alignment="CENTER" mnemonicParsing="false" text="Wyświetl wszystkie wpisy" />
+      <Button fx:id="displayMapButton" alignment="CENTER" mnemonicParsing="false" text="Wyświetl mapę i współrzędne obserwacji" />
       <Button fx:id="displayPhotosButton" alignment="CENTER" mnemonicParsing="false" text="Wyświetl zgromadzone zdjęcia" />
       <Button fx:id="loadButton" alignment="CENTER" mnemonicParsing="false" text="Wczytaj zapisany dziennik z pliku" />
       <Button fx:id="saveButton" alignment="CENTER" mnemonicParsing="false" text="Zapisz dziennik do pliku" />
