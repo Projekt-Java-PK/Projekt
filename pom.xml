@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.javapk</groupId>
-    <artifactId>ObservationsDiary</artifactId>
+    <artifactId>Diary</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
