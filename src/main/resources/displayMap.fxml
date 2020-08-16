@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<?import java.util.ArrayList?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javapk.DisplayMapController">
+   <right>
+      <AnchorPane style="-fx-border-color: black; -fx-border-style: solid; -fx-border-image-width: 3;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="720.0" prefWidth="230.0" style="-fx-background-color: #B4BFB0;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="28.0" prefWidth="230.0" text="Współrzędne miejsc w dzienniku" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefWidth="230.0" text="Kliknij na współrzędne by je wyszukać" textAlignment="CENTER" textFill="#a11919">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="coordinates1" onMouseClicked="#displayPoint" textFill="#2a77bf">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="coordinates2" onMouseClicked="#displayPoint" textFill="#2a77bf">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="coordinates3" onMouseClicked="#displayPoint" textFill="#2a77bf">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="coordinates4" onMouseClicked="#displayPoint" textFill="#2a77bf">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="coordinates5" onMouseClicked="#displayPoint" textFill="#2a77bf">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="coordinates6" onMouseClicked="#displayPoint" textFill="#2a77bf">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="menuButton" onAction="#returnToMenu" mnemonicParsing="false" style="-fx-background-color: F6828C;" text="Menu" BorderPane.alignment="CENTER">
+                     <VBox.margin>
+                        <Insets left="85.0" top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <fx:define>
+            <ArrayList fx:id="coordinatesList">
+               <fx:reference source="coordinates1" />
+               <fx:reference source="coordinates2" />
+               <fx:reference source="coordinates3" />
+               <fx:reference source="coordinates4" />
+               <fx:reference source="coordinates5" />
+               <fx:reference source="coordinates6" />
+            </ArrayList>
+         </fx:define>
+      </AnchorPane>
+
+   </right>
+   <left>
+      <WebView fx:id="webMap" prefHeight="720.0" prefWidth="1047.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>
