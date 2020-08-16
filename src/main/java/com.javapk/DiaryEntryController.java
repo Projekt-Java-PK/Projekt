@@ -64,11 +64,11 @@ public class DiaryEntryController {
 
         // Save entry in selected directory
         Path selectedImagePath = Paths.get(selectedImage.toString());
-        selectedImage.renameTo(new File(selectedImagePath.getParent().toString() + File.separator + entry.getFormattedDate() + ".jpg"));
-        selectedImage = new File(selectedImagePath.getParent().toString() + File.separator + entry.getFormattedDate() + ".jpg");
+        selectedImage.renameTo(new File(selectedImagePath.getParent().toString() + File.separator + entry.getTitle() + "_" + entry.getFormattedDate() + ".jpg"));
+        selectedImage = new File(selectedImagePath.getParent().toString() + File.separator + entry.getTitle() + "_" + entry.getFormattedDate() + ".jpg");
 
         Files.copy(selectedImage.toPath(), selectedDirectory.toPath().resolve(selectedImage.toPath().getFileName()));
-        File file = new File(new URI(selectedDirectory.toURI().toString() + entry.getFormattedDate() + ".csv"));
+        File file = new File(new URI(selectedDirectory.toURI().toString() + entry.getTitle() + "_" + entry.getFormattedDate() + ".csv"));
         file.createNewFile();
 
         Writer fileWriter = new FileWriter(file);

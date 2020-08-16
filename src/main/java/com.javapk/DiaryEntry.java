@@ -31,6 +31,16 @@ public class DiaryEntry {
         return date;
     }
 
+    public Enum<ObservationType> getType() {
+        return type;
+    }
+
+    public String getFileExtension() {
+        int i = image.getName().lastIndexOf('.');
+        String extension = image.getName().substring(i + 1);
+        return extension;
+    }
+
     public String getFormattedDate() {
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd_MM_yyyy_HH_mm");
         return this.date.format(dateFormat);
@@ -43,6 +53,6 @@ public class DiaryEntry {
 
     @Override
     public String toString() {
-        return this.date + " " + this.title + " " + this.content;
+        return this.date + " " + this.title + " " + this.content + " " + this.coordinateEast + " " + this.coordinateNorth;
     }
 }

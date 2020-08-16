@@ -40,7 +40,7 @@ public class DisplayPhotosController {
                 String content = fileScanner.next();
                 String type = fileScanner.next();
 
-                dateLabelList.get(entriesCounter).setText(date.substring(0, 10));
+                dateLabelList.get(entriesCounter).setText(date.substring(0, 16));
                 typeLabelList.get(entriesCounter).setText(type);
                 entriesCounter++;
 
