@@ -1,6 +1,5 @@
 package com.javapk;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -8,7 +7,6 @@ import javafx.scene.control.Button;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
 
 public class MenuController {
@@ -16,8 +14,6 @@ public class MenuController {
     public Button displayEntriesButton;
     public Button displayMapButton;
     public Button displayPhotosButton;
-    public Button loadButton;
-    public Button saveButton;
     public Button exitButton;
 
     private Stage getCurrentStage() {
@@ -35,10 +31,11 @@ public class MenuController {
         directoryChooser.setTitle("Wybierz folder z wpisami dziennika");
 
         DisplayEntriesController.selectedDirectory = directoryChooser.showDialog(getCurrentStage());
-
-        Parent displayEntriesLayout = FXMLLoader.load(getClass().getClassLoader().getResource("displayEntries.fxml"));
-        Stage stage = getCurrentStage();
-        stage.setScene(new Scene(displayEntriesLayout, 1280, 720));
+        if (DisplayEntriesController.selectedDirectory != null) {
+            Parent displayEntriesLayout = FXMLLoader.load(getClass().getClassLoader().getResource("displayEntries.fxml"));
+            Stage stage = getCurrentStage();
+            stage.setScene(new Scene(displayEntriesLayout, 1280, 720));
+        }
     }
 
     public void displayPhotos() throws IOException {
@@ -46,16 +43,24 @@ public class MenuController {
         directoryChooser.setTitle("Wybierz folder z wpisami dziennika");
 
         DisplayPhotosController.selectedDirectory = directoryChooser.showDialog(getCurrentStage());
-
-        Parent displayEntriesLayout = FXMLLoader.load(getClass().getClassLoader().getResource("displayPhotos.fxml"));
-        Stage stage = getCurrentStage();
-        stage.setScene(new Scene(displayEntriesLayout, 1280, 720));
+        if (DisplayPhotosController.selectedDirectory != null) {
+            Parent displayEntriesLayout = FXMLLoader.load(getClass().getClassLoader().getResource("displayPhotos.fxml"));
+            Stage stage = getCurrentStage();
+            stage.setScene(new Scene(displayEntriesLayout, 1280, 720));
+        }
     }
-    /*
-    public void displayMap() {
-        Stage stage = getCurrentStage();
-        stage.setScene(MapDisplay.getMapScene());
-    }*/
+
+    public void displayMap() throws IOException {
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setTitle("Wybierz folder z wpisami dziennika");
+
+        DisplayMapController.selectedDirectory = directoryChooser.showDialog(getCurrentStage());
+        if (DisplayMapController.selectedDirectory != null) {
+            Parent displayEntriesLayout = FXMLLoader.load(getClass().getClassLoader().getResource("displayMap.fxml"));
+            Stage stage = getCurrentStage();
+            stage.setScene(new Scene(displayEntriesLayout, 1280, 720));
+        }
+    }
 
     public void exitApplication() {
         Stage stage = getCurrentStage();
