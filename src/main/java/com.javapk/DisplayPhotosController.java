@@ -40,7 +40,7 @@ public class DisplayPhotosController {
                 String content = fileScanner.next();
                 String type = fileScanner.next();
 
-                dateLabelList.get(entriesCounter).setText(date.substring(0, 9));
+                dateLabelList.get(entriesCounter).setText(date.substring(0, 10));
                 typeLabelList.get(entriesCounter).setText(type);
                 entriesCounter++;
 
@@ -52,7 +52,7 @@ public class DisplayPhotosController {
     }
 
     public void returnToMenu() throws IOException {
-        Parent addEntryLayout = FXMLLoader.load(getClass().getClassLoader().getResource("gui.fxml"));
+        Parent addEntryLayout = FXMLLoader.load(getClass().getClassLoader().getResource("menu.fxml"));
         Stage stage = (Stage) menuButton.getScene().getWindow();;
         stage.setScene(new Scene(addEntryLayout, 1280, 720));
     }

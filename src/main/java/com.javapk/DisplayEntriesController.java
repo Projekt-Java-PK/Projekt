@@ -27,6 +27,7 @@ public class DisplayEntriesController {
     public void initialize() throws FileNotFoundException {
         File[] files = selectedDirectory.listFiles();
         int entriesCounter = 0;
+        int imagesCounter = 0;
 
         for (File file : files) {
             int i = file.getName().lastIndexOf('.');
@@ -42,7 +43,8 @@ public class DisplayEntriesController {
 
                 setElementsContent(date, title, content, type, entriesCounter++);
             } else if (extension.equals("jpg")) {
-                imageViewList.get(entriesCounter).setImage(new Image(file.toURI().toString()));
+                imageViewList.get(imagesCounter).setImage(new Image(file.toURI().toString()));
+                imagesCounter++;
             }
         }
     }
@@ -54,7 +56,7 @@ public class DisplayEntriesController {
     }
 
     public void returnToMenu() throws IOException {
-        Parent addEntryLayout = FXMLLoader.load(getClass().getClassLoader().getResource("gui.fxml"));
+        Parent addEntryLayout = FXMLLoader.load(getClass().getClassLoader().getResource("menu.fxml"));
         Stage stage = (Stage) menuButton.getScene().getWindow();;
         stage.setScene(new Scene(addEntryLayout, 1280, 720));
     }
