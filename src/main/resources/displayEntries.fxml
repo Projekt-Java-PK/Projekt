@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<?import java.util.ArrayList?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: F0DCCA;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javapk.DisplayEntriesController">
+   <center>
+      <AnchorPane maxHeight="660.0" maxWidth="1140.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: CDC6A5;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                     <children>
+                        <Label fx:id="dateLabel_1" layoutX="14.0" layoutY="14.0" />
+                        <Label fx:id="contentLabel_1" layoutX="14.0" layoutY="194.0" />
+                        <ImageView fx:id="imageView_1" fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="titleLabel_1" layoutX="14.0" layoutY="90.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                     <children>
+                        <Label fx:id="dateLabel_2" layoutX="14.0" layoutY="14.0" />
+                        <Label fx:id="contentLabel_2" layoutX="14.0" layoutY="194.0" />
+                        <ImageView fx:id="imageView_2" fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="titleLabel_2" layoutX="14.0" layoutY="90.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                     <children>
+                        <Label fx:id="dateLabel_3" layoutX="14.0" layoutY="14.0" />
+                        <Label fx:id="contentLabel_3" layoutX="14.0" layoutY="194.0" />
+                        <ImageView fx:id="imageView_3" fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="titleLabel_3" layoutX="14.0" layoutY="90.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="466.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="340.0">
+               <children>
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                     <children>
+                        <Label fx:id="dateLabel_4" layoutX="14.0" layoutY="14.0" />
+                        <Label fx:id="contentLabel_4" layoutX="14.0" layoutY="194.0" />
+                        <ImageView fx:id="imageView_4" fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="titleLabel_4" layoutX="14.0" layoutY="90.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                     <children>
+                        <Label fx:id="dateLabel_5" layoutX="14.0" layoutY="14.0" />
+                        <Label fx:id="contentLabel_5" layoutX="14.0" layoutY="194.0" />
+                        <ImageView fx:id="imageView_5" fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="titleLabel_5" layoutX="14.0" layoutY="90.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                     <children>
+                        <Label fx:id="dateLabel_6" layoutX="14.0" layoutY="14.0" />
+                        <Label fx:id="contentLabel_6" layoutX="14.0" layoutY="194.0" />
+                        <ImageView fx:id="imageView_6" fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="titleLabel_6" layoutX="14.0" layoutY="90.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+         <fx:define>
+            <ArrayList fx:id="dateLabelList">
+               <fx:reference source="dateLabel_1" />
+               <fx:reference source="dateLabel_2" />
+               <fx:reference source="dateLabel_3" />
+               <fx:reference source="dateLabel_4" />
+               <fx:reference source="dateLabel_5" />
+               <fx:reference source="dateLabel_6" />
+            </ArrayList>
+
+            <ArrayList fx:id="contentLabelList">
+               <fx:reference source="contentLabel_1" />
+               <fx:reference source="contentLabel_2" />
+               <fx:reference source="contentLabel_3" />
+               <fx:reference source="contentLabel_4" />
+               <fx:reference source="contentLabel_5" />
+               <fx:reference source="contentLabel_6" />
+            </ArrayList>
+
+            <ArrayList fx:id="imageViewList">
+               <fx:reference source="imageView_1" />
+               <fx:reference source="imageView_2" />
+               <fx:reference source="imageView_3" />
+               <fx:reference source="imageView_4" />
+               <fx:reference source="imageView_5" />
+               <fx:reference source="imageView_6" />
+            </ArrayList>
+
+            <ArrayList fx:id="titleLabelList">
+               <fx:reference source="titleLabel_1" />
+               <fx:reference source="titleLabel_2" />
+               <fx:reference source="titleLabel_3" />
+               <fx:reference source="titleLabel_4" />
+               <fx:reference source="titleLabel_5" />
+               <fx:reference source="titleLabel_6" />
+            </ArrayList>
+         </fx:define>
+      </AnchorPane>
+   </center>
+   <top>
+      <BorderPane prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <Label text="Wpisy w dzienniku" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets right="70.0" />
+               </BorderPane.margin>
+            </Label>
+         </center>
+         <left>
+            <Button fx:id="menuButton" onAction="#returnToMenu" mnemonicParsing="false" style="-fx-background-color: F6828C;" text="Menu" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="20.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </left>
+      </BorderPane>
+   </top>
+</BorderPane>
