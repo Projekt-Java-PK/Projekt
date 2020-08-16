@@ -16,7 +16,7 @@
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
                <children>
-                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 2;">
                      <children>
                         <Label fx:id="dateLabel_1" layoutX="14.0" layoutY="14.0" />
                         <Label fx:id="contentLabel_1" layoutX="14.0" layoutY="194.0" />
@@ -24,7 +24,7 @@
                         <Label fx:id="titleLabel_1" layoutX="14.0" layoutY="90.0" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 2;">
                      <children>
                         <Label fx:id="dateLabel_2" layoutX="14.0" layoutY="14.0" />
                         <Label fx:id="contentLabel_2" layoutX="14.0" layoutY="194.0" />
@@ -32,7 +32,7 @@
                         <Label fx:id="titleLabel_2" layoutX="14.0" layoutY="90.0" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 2;">
                      <children>
                         <Label fx:id="dateLabel_3" layoutX="14.0" layoutY="14.0" />
                         <Label fx:id="contentLabel_3" layoutX="14.0" layoutY="194.0" />
@@ -44,7 +44,7 @@
             </HBox>
             <HBox layoutX="14.0" layoutY="466.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="340.0">
                <children>
-                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 2;">
                      <children>
                         <Label fx:id="dateLabel_4" layoutX="14.0" layoutY="14.0" />
                         <Label fx:id="contentLabel_4" layoutX="14.0" layoutY="194.0" />
@@ -52,7 +52,7 @@
                         <Label fx:id="titleLabel_4" layoutX="14.0" layoutY="90.0" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 2;">
                      <children>
                         <Label fx:id="dateLabel_5" layoutX="14.0" layoutY="14.0" />
                         <Label fx:id="contentLabel_5" layoutX="14.0" layoutY="194.0" />
@@ -60,7 +60,7 @@
                         <Label fx:id="titleLabel_5" layoutX="14.0" layoutY="90.0" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0">
+                  <AnchorPane maxWidth="380.0" prefHeight="200.0" prefWidth="380.0" style="-fx-border-color: black; -fx-border-style: solid; -fx-border-width: 2;">
                      <children>
                         <Label fx:id="dateLabel_6" layoutX="14.0" layoutY="14.0" />
                         <Label fx:id="contentLabel_6" layoutX="14.0" layoutY="194.0" />

@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <?import javafx.collections.FXCollections?>
-
 <?import com.javapk.ObservationType?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0"
-            style="-fx-background-color: F0DCCA;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javapk.DiaryEntryController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0"
+            prefWidth="1280.0" style="-fx-background-color: F0DCCA;" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javapk.DiaryEntryController">
    <center>
-      <AnchorPane maxHeight="480.0" maxWidth="880.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: CDC6A5; -fx-border-width: 3; -fx-border-color: black; -fx-border-style: solid;" BorderPane.alignment="CENTER">
+      <AnchorPane maxHeight="540.0" maxWidth="940.0" prefHeight="200.0" prefWidth="200.0"
+                  style="-fx-background-color: CDC6A5; -fx-border-width: 3; -fx-border-color: black; -fx-border-style: solid;"
+                  BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="title" layoutX="140.0" layoutY="63.0" prefWidth="200.0" promptText="Tytuł wpisu">
                <font>
-                  <Font size="14.0" />
+                  <Font size="14.0"/>
                </font>
             </TextField>
-            <TextArea fx:id="content" layoutX="40.0" layoutY="158.0" prefHeight="300.0" prefWidth="400.0" promptText="Treść wpisu">
+            <TextArea fx:id="content" layoutX="40.0" layoutY="158.0" prefHeight="300.0" prefWidth="400.0"
+                      promptText="Treść wpisu">
                <font>
-                  <Font size="18.0" />
+                  <Font size="18.0"/>
                </font>
             </TextArea>
-            <Button fx:id="save" onAction="#saveEntry" layoutX="625.0" layoutY="421.0" mnemonicParsing="false" style="-fx-background-color: #8D9F87;" text="Zapisz">
+            <Button fx:id="save" layoutX="626.0" layoutY="483.0" mnemonicParsing="false" onAction="#saveEntry"
+                    style="-fx-background-color: #8D9F87;" text="Zapisz">
                <font>
-                  <Font size="16.0" />
+                  <Font size="16.0"/>
                </font>
             </Button>
-            <ChoiceBox fx:id="type" layoutX="583.0" layoutY="308.0" prefWidth="150.0">
+            <ChoiceBox fx:id="type" layoutX="584.0" layoutY="264.0" prefWidth="150.0">
                <items>
                   <FXCollections fx:factory="observableArrayList">
                      <ObservationType fx:value="KWIATY"/>
@@ -45,21 +44,56 @@
                   </FXCollections>
                </items>
             </ChoiceBox>
-            <ImageView fx:id="selectedImageView" fitHeight="150.0" fitWidth="200.0" layoutX="629.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="selectedImageView" fitHeight="150.0" fitWidth="200.0" layoutX="585.0" layoutY="18.0"
+                       pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="no-image.png"/>
                </image>
             </ImageView>
-            <Button fx:id="choose" onAction="#FileChooser" layoutX="573.0" layoutY="202.0" mnemonicParsing="false" text="Wybierz zdjęcie z obserwacją" />
-            <Label layoutX="580.0" layoutY="291.0" text="Wybierz kategorię obserwacji" />
+            <Button fx:id="choose" layoutX="574.0" layoutY="183.0" mnemonicParsing="false" onAction="#FileChooser"
+                    text="Wybierz zdjęcie z obserwacją"/>
+            <Label layoutX="569.0" layoutY="236.0" text="Wybierz kategorię obserwacji">
+               <font>
+                  <Font size="14.0"/>
+               </font>
+            </Label>
+            <TextField fx:id="coordinateEast" layoutX="500.0" layoutY="397.0" promptText="East"/>
+            <TextField fx:id="coordinateNorth" layoutX="670.0" layoutY="397.0" promptText="North"/>
+            <Label layoutX="470.0" layoutY="338.0"
+                   text="Wprowadź współrzędne miejsca obserwacji,&#10;możesz użyć przycisku obok do wyboru miejsca z mapy">
+               <font>
+                  <Font size="14.0"/>
+               </font>
+            </Label>
+            <Button onAction="#displayMap" layoutX="835.0" layoutY="346.0" mnemonicParsing="false"
+                    style="-fx-background-color: #B4BFB0; -fx-border-color: black; -fx-border-style: solid; -fx-border-image-width: 2;"
+                    text="MAPA"/>
          </children>
       </AnchorPane>
    </center>
    <top>
-      <Label text="Dodawanie wpisu do dziennika" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
+      <BorderPane prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <Label text="Dodawanie wpisu do dziennika" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0"/>
+               </font>
+               <BorderPane.margin>
+                  <Insets right="70.0"/>
+               </BorderPane.margin>
+            </Label>
+         </center>
+         <left>
+            <Button fx:id="menuButton" mnemonicParsing="false" onAction="#returnToMenu"
+                    style="-fx-background-color: F6828C;" text="Menu" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="15.0"/>
+               </font>
+               <BorderPane.margin>
+                  <Insets left="20.0"/>
+               </BorderPane.margin>
+            </Button>
+         </left>
+      </BorderPane>
    </top>
 </BorderPane>
