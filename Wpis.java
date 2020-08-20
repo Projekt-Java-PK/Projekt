@@ -40,15 +40,9 @@ Dodać obslugę błędów przy wprowadzaniu daty od użytkownika
         this.miejscowosc = input.next();
     }
 
-    void setOpis() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Podaj opis pogody: ");
-        this.opis = input.nextLine();
-    }
-
     void setTemperatura() {
         Scanner input = new Scanner(System.in);
-        System.out.print("Podaj temperature w stopniach Celcjusza: ");
+        System.out.print("Podaj temperature w °C: ");
         String temp;
         while (true) {
             try {
@@ -68,7 +62,7 @@ Dodać obslugę błędów przy wprowadzaniu daty od użytkownika
 
     void setPredkoscWiatru() {
         Scanner input = new Scanner(System.in);
-        System.out.print("Podaj prędkość wiatru: ");
+        System.out.print("Podaj prędkość wiatru w km/h: ");
         String wiatr;
         while (true) {
             try {
@@ -102,11 +96,16 @@ Dodać obslugę błędów przy wprowadzaniu daty od użytkownika
         }
 
     }
+    void setOpis() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Podaj opis: ");
+        this.opis = input.nextLine();
+    }
     public void getWpis() {
         System.out.println("-----------------------------------------");
         System.out.println(data + " " + kraj + " " + miejscowosc);
         System.out.println("Stopień zachmurzenia w skali 0-10: " + stopienZachmurzenia);
-        System.out.println("Prędkość wiatru: " + predkoscWiatru + "km/h");
+        System.out.println("Prędkość wiatru: " + predkoscWiatru + " km/h");
         System.out.println("Temperatura: " + temperatura + " °C");
         System.out.println("Opis wpisu:\n" + opis);
     }
