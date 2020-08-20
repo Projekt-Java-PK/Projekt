@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        Menu menu = new Menu();
         /*//Wpis wpis1 = new Wpis();
         // stworzenie konstruktorem bezparametrowym - aktualna data
         Date nowDate = new Date();
@@ -33,8 +34,6 @@ public class Main {
         //System.out.println(podanaData.getDayOfWeek());
         //LocalDate todayNextYear = podanaData.plusYears(1);
         //System.out.println(todayNextYear.getDayOfWeek());
-
-        Wpis w1 = new Wpis();
 
     }
 }
