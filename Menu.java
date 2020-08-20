@@ -3,79 +3,50 @@ package com.company;
 import java.util.Scanner;
 
 public class Menu {
+    Dziennik dziennik = new Dziennik();
+    Menu(){menu();}
     public void menu(){
         Scanner input = new Scanner(System.in);
         String wybor;
-        int liczba;
+        int liczba = -1;
         while(true){
-            System.out.print("0 - dodaj wpis\n1 - przeczytaj wpis\n2 - usun wpis\n3 - koniec"); //można dodać również opcje edycji wybranego wpisu
-            System.out.println("Wybierz numer: ");
+            System.out.println("-----------------------------------------");
+            System.out.println("0 - dodaj wpis\n1 - wyswietl wybrany wpis\n2 - wyswietl wszystkie wpisy\n3 - usuń wybrany wpis\n4 - usuń wszystkie wpisy\n5 - koniec"); //można dodać również opcje edycji wybranego wpisu
+            System.out.print("Wybierz numer: ");
             wybor = input.next();
+            System.out.println("-----------------------------------------");
             try {
                 liczba = Integer.parseInt(wybor);
-                if (0 <= liczba && liczba <= 3)
-                {
-                    switch (liczba){
-                        case 0:
-                            Wpis wpis = new Wpis();
-                            //Dodajemy utworzony obiekt do klasy Dziennik która przechowuje wszystkie wpisy
-                            //nastepuje zapis do pliku stworzonego obiektu
-                            break;
-                        case 1:
-                            System.out.print("0 - wyswietl wybrany wpis\n1 - wyswietl wszystkie wpisy\n2 - powrót");
-                            System.out.println("Wybierz numer: ");
-                            wybor = input.next();
-                            try {
-                                liczba = Integer.parseInt(wybor);
-                                if (0 <= liczba && liczba <= 2){
-                                    switch (liczba){
-                                        case 0:
-                                        case 1:
-                                        case 2:
-                                    }
-
-                                }
-                                else{
-                                    System.out.println("Liczba poza skalą wyboru");
-                                }
-                            }
-                            catch (Exception exception)
-                            {
-                                System.out.println("Wprowadz liczbe typu int");
-                            }
-                        case 2:
-                            System.out.print("0 - usuń wybrany wpis\n1 - usuń wszystkie wpisy\n2 - powrót");
-                            System.out.println("Wybierz numer: ");
-                            wybor = input.next();
-                            try {
-                                liczba = Integer.parseInt(wybor);
-                                if (0 <= liczba && liczba <= 2){
-                                    switch (liczba){
-                                        case 0:
-                                        case 1:
-                                        case 2:
-                                    }
-                                }
-                                else{
-                                    System.out.println("Liczba poza skalą wyboru");
-                                }
-                            }
-                            catch (Exception exception)
-                            {
-                                System.out.println("Wprowadz liczbe typu int");
-                            }
-                        case 3:
-                            System.out.printf("Koniec programu");
-                            break;
-                    }
+                switch (liczba){
+                    case 0:
+                        Wpis wpis = new Wpis();
+                        dziennik.dodajWpis(wpis);
+                        //nastepuje zapis do pliku stworzonego obiektu
+                        break;
+                    case 1:
+                         dziennik.wyswietlWpis();
+                         break;
+                    case 2:
+                        dziennik.wyswietlWszystko();
+                        break;
+                    case 3:
+                        dziennik.usunWpis();
+                        break;
+                    case 4:
+                        dziennik.usunWszystko();
+                        break;
+                    case 5:
+                        System.out.println("Koniec programu");
+                        break;
+                    default:
+                        System.out.println("Liczba poza skalą wyboru");
                 }
-                else
-                    System.out.println("Liczba poza skalą wyboru");
             }
             catch (Exception exception)
             {
                 System.out.println("Wprowadz liczbe typu int");
             }
+            if(liczba == 5)break;
         }
     }
 }
