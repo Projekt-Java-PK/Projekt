@@ -46,7 +46,8 @@ public class Menu {
             {
                 System.out.println("Wprowadz liczbe typu int");
             }
-            if(liczba == 5)break;
+            if(liczba == 5)
+                break;
         }
     }
 }
