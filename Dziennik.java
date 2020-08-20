@@ -34,7 +34,7 @@ public class Dziennik {
         if(!dziennik.isEmpty())
             for(Wpis iter : dziennik)
             {
-                System.out.println("Wpis nr: " + iter);
+                System.out.println("Wpis nr: " + dziennik.indexOf(iter));
                 iter.getWpis();
             }
         else
