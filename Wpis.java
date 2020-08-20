@@ -29,8 +29,7 @@ Dodać obslugę błędów przy wprowadzaniu daty od użytkownika
         System.out.println("Podaj date obserwacji dd,mm,yyyy:");
         String data = input.nextLine();
         DateTimeFormatter dateFormater = DateTimeFormatter.ofPattern("dd,MM,yyyy");
-        LocalDate podanaData = LocalDate.parse(data, dateFormater);
-        this.data = podanaData;
+        this.data = LocalDate.parse(data, dateFormater);
     }
 
     void setMiejsce() {
@@ -44,7 +43,7 @@ Dodać obslugę błędów przy wprowadzaniu daty od użytkownika
     void setOpis() {
         Scanner input = new Scanner(System.in);
         System.out.print("Podaj opis pogody: ");
-        this.opis = input.next();
+        this.opis = input.nextLine();
     }
 
     void setTemperatura() {
@@ -104,7 +103,11 @@ Dodać obslugę błędów przy wprowadzaniu daty od użytkownika
 
     }
     public void getWpis() {
-        System.out.println("");
-
+        System.out.println("-----------------------------------------");
+        System.out.println(data + " " + kraj + " " + miejscowosc);
+        System.out.println("Stopień zachmurzenia w skali 0-10: " + stopienZachmurzenia);
+        System.out.println("Prędkość wiatru: " + predkoscWiatru + "km/h");
+        System.out.println("Temperatura: " + temperatura + " °C");
+        System.out.println("Opis wpisu:\n" + opis);
     }
 }
